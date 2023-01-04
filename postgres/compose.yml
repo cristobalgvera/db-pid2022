@@ -1,0 +1,17 @@
+---
+services:
+  postgres:
+    image: postgres
+    container_name: pid2022-postgres
+    volumes:
+      - ./backups:/backups
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=postgres
+      - CMS_DB_HOST=${CMS_DB_HOST}
+      - CMS_DB_PORT=${CMS_DB_PORT}
+      - CMS_DB_NAME=${CMS_DB_NAME}
+      - CMS_DB_SCHEMA=${CMS_DB_SCHEMA}
+      - CMS_DB_USERNAME=${CMS_DB_USERNAME}
+      - CMS_DB_PASSWORD=${CMS_DB_PASSWORD}
